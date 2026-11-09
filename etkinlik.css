@@ -1,0 +1,36 @@
+/*
+etkinlik bolumunun tasarim ayarlari vardir
+bu dosya style.css dosyasindan sonra yuklenir
+renkler style.css'te tanimlanan renklerden alinir
+*/
+
+/* arama kutusu */
+.toolbar{justify-content:flex-start;margin-bottom:26px}
+.search input{width:min(380px,100%)}
+
+/* etkinliklerin durum etiketleri */
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:600;background:var(--bg-alt);color:var(--muted);border:1px solid var(--line);white-space:nowrap}
+.pill.soon{background:color-mix(in srgb,var(--accent) 14%,transparent);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+.pill.now{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+
+/* ay basliklari, etkinlikler aylara gore gruplanirken kullanilan basliklari duzenleme */
+.group-title{grid-column:1/-1;margin:18px 0 0;font-family:var(--head);font-size:1.1rem;letter-spacing:-.01em}
+.group-title:first-child{margin-top:0}
+
+/* etkinlik kartlari */
+.archive .cover{height:190px}
+.card-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.card.is-next{border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.card .desc{margin:0;color:var(--muted);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 0}
+.facts span{padding:3px 10px;border-radius:999px;background:var(--bg-alt);color:var(--muted);font-size:.78rem;font-weight:500}
+
+/* etkinlik detay penceresi */
+.meta{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:20px}
+.meta li{display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:12px;background:var(--bg-alt)}
+.meta li span{color:var(--muted);font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.meta li b{color:var(--ink);font-size:.95rem;font-weight:600}
+.gallery{display:block}
+.gallery h4{display:flex;align-items:baseline;gap:8px;margin:0 0 10px;font-family:var(--head);font-size:1.05rem}
+.gallery h4 small{color:var(--muted);font-family:var(--font);font-size:.8rem;font-weight:500}
+.g-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}

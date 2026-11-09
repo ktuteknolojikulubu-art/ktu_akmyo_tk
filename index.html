@@ -1,0 +1,154 @@
+<!--web sitesinde hangi bolumlerin bulundugu ve bolumlerin yapilandirmasi-->
+
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abdullah Kanca MYO Teknoloji Kulübü</title>
+  <meta name="description" content="Karadeniz Teknik Üniversitesi Abdullah Kanca MYO Teknoloji Kulübü: etkinlikler, atölyeler, konuşmalar ve hackathonlar.">
+  <meta property="og:title" content="Abdullah Kanca MYO Teknoloji Kulübü">
+  <meta property="og:description" content="Birlikte öğren, üret ve paylaş.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#111827">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Cpath d='M22 20 10 32l12 12M42 20l12 12-12 12M36 16 28 48' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="etkinlik.css">
+</head>
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+
+  <header class="nav" id="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top" aria-label="Ana sayfa">
+        <span class="logo" id="brandLogo" aria-hidden="true">&lt;/&gt;</span>
+        <span data-site="name">Abdullah Kanca MYO Teknoloji Kulübü</span>
+      </a>
+      <nav id="menu" aria-label="Ana menü">
+        <a href="#hakkimizda">Hakkımızda</a>
+        <a href="#etkinlikler">Etkinlikler</a>
+        <a href="#ekip">Ekip</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" aria-label="Tema değiştir" title="Tema değiştir">◐</button>
+        <button class="icon-btn burger" id="burger" aria-label="Menüyü aç" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <section class="hero" id="top">
+      <div class="grid-bg" aria-hidden="true"></div>
+      <div class="wrap hero-in">
+        <p class="eyebrow"><span data-site="university">Karadeniz Teknik Üniversitesi</span> · Abdullah Kanca MYO Teknoloji Kulübü</p>
+        <h1 data-site="tagline">Birlikte öğren, üret ve paylaş.</h1>
+        <p class="lead" data-site="description"></p>
+        <div class="cta">
+          <a class="btn primary" href="#etkinlikler">Etkinlikleri Gör</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="hakkimizda">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Hakkımızda</p>
+          <h2>Kodla başlayan bir kulüp</h2>
+        </div>
+        <div class="about">
+          <div class="about-text" id="aboutText"></div>
+          <div class="focus" id="focus"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="etkinlikler">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Etkinlikler</p>
+          <h2>Neler yapıyoruz?</h2>
+        </div>
+
+        <div class="toolbar">
+          <div class="tabs" role="tablist" aria-label="Etkinlik zamanı">
+            <button role="tab" class="tab active" data-tab="upcoming" aria-selected="true">Yaklaşan <span class="count" id="cUp">0</span></button>
+            <button role="tab" class="tab" data-tab="past" aria-selected="false">Geçmiş <span class="count" id="cPast">0</span></button>
+          </div>
+          <label class="search">
+            <span class="sr">Etkinlik ara</span>
+            <input id="q" type="search" placeholder="Etkinlik ara..." autocomplete="off">
+          </label>
+        </div>
+        <div class="chips" id="chips" role="group" aria-label="Kategori filtresi"></div>
+
+        <div class="cards" id="cards" aria-live="polite"></div>
+        <p class="empty" id="empty" hidden></p>
+      </div>
+    </section>
+
+    <section class="section" id="ekip">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Ekip</p>
+          <h2>Kulubü yürüten ekip</h2>
+        </div>
+        <div class="team" id="team"></div>
+      </div>
+    </section>
+
+    <section class="section cta-band" id="iletisim">
+      <div class="wrap band-in">
+        <div>
+          <p class="kicker">İletişim</p>
+          <h2>Bizimle iletişime geçin</h2>
+          <p class="lead">Etkinlikler, işbirlikleri ve sorularınız için bize yazabilir, sosyal medyadan takip edebilirsiniz.</p>
+        </div>
+        <div class="contact">
+          <a class="mail" id="mailLink" href="#"></a>
+          <div class="socials" id="socials"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot-in">
+      <p>© <span id="year"></span> <span data-site="name"></span> · <span data-site="university"></span></p>
+      <a href="#top">Yukarı çık ↑</a>
+    </div>
+  </footer>
+
+  <dialog id="modal" aria-labelledby="mTitle">
+    <article class="modal-in">
+      <button class="close" id="mClose" aria-label="Kapat">×</button>
+      <div class="m-cover" id="mCover"></div>
+      <div class="m-body">
+        <p class="badge" id="mBadge"></p>
+        <h3 id="mTitle"></h3>
+        <ul class="meta" id="mMeta"></ul>
+        <p id="mDesc"></p>
+        <div class="report" id="mReport"></div>
+        <div class="gallery" id="mGallery"></div>
+        <div class="m-actions" id="mActions"></div>
+      </div>
+    </article>
+  </dialog>
+
+  <dialog id="lightbox" aria-label="Fotoğraf görüntüleyici">
+    <div class="lb-in">
+      <button class="lb-btn lb-close" id="lbClose" aria-label="Kapat">×</button>
+      <button class="lb-btn lb-prev" id="lbPrev" aria-label="Önceki fotoğraf">‹</button>
+      <img id="lbImg" alt="">
+      <button class="lb-btn lb-next" id="lbNext" aria-label="Sonraki fotoğraf">›</button>
+      <p class="lb-count" id="lbCount"></p>
+    </div>
+  </dialog>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
