@@ -26,6 +26,7 @@ a{color:inherit}
 .nav.scrolled{border-color:var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:84px;gap:16px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--head);font-weight:700;font-size:1.05rem}
+@media(max-width:600px){.brand{gap:6px;font-size:.85rem;min-width:0;}.brand .logo{flex-shrink:0;}.brand span[data-site="name"]{min-width:0;line-height:1.2;}}
 .logo{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:var(--accent-ink);font-family:ui-monospace,Menlo,monospace;font-size:.85rem;font-weight:700}
 #menu{display:flex;gap:6px}
 #menu a{text-decoration:none;color:var(--muted);padding:8px 14px;border-radius:999px;font-weight:500;font-size:.95rem;transition:.2s}
